@@ -2,11 +2,17 @@
 //  AppDelegate.swift
 //  Contacts
 //
-//  Created by Yinhuan Yuan on 12/19/18.
+//  Created by Jun Dang on 12/19/18.
 //  Copyright © 2018 Jun Dang. All rights reserved.
 //
 
 import UIKit
+
+class CustomNavigationController: UINavigationController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = CustomNavigationController(rootViewController: ContactsTableTableViewController())
+        UINavigationBar.appearance().barTintColor = UIColor.orange
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 19)!]
+        window?.backgroundColor = UIColor.white
         return true
     }
 

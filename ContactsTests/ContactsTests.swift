@@ -2,12 +2,12 @@
 //  ContactsTests.swift
 //  ContactsTests
 //
-//  Created by Yinhuan Yuan on 12/19/18.
+//  Created by Jun Dang on 12/19/18.
 //  Copyright © 2018 Jun Dang. All rights reserved.
 //
 
 import XCTest
-@testable import Contacts
+//@testable import Contacts
 
 class ContactsTests: XCTestCase {
 
