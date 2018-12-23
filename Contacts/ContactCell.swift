@@ -22,7 +22,7 @@ class ContactCell: UITableViewCell {
         accessoryView = starButton
     
     }
-     weak var delegate: ContactsTableTableViewController?
+     weak var delegate: HandleButtonDelegate?
     
     @objc private func handleMarkAsFavorite() {
         delegate?.handleFavoriteMark(cell: self as UITableViewCell)
